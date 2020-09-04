@@ -1,0 +1,10 @@
+# Ignore everything but specific files.
+*
+
+# Those specific files:
+!.git*
+!.git
+!.bash*
+.bash_history
+!.profile
+!.psqlrc
