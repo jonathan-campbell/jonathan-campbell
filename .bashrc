@@ -127,3 +127,7 @@ if [ -f "$HOME/.bash-git-prompt/gitprompt.sh" ]; then
     GIT_PROMPT_ONLY_IN_REPO=1
     source $HOME/.bash-git-prompt/gitprompt.sh
 fi
+
+# Quick handle to connect to our DBs via cloud sql proxy
+function csp { cloud_sql_proxy -instances="$1"=tcp:5433; }
+export -f csp
