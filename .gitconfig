@@ -3,6 +3,7 @@
 	email = jonathan.campbell@urbint.com
 [core]
 	editor = code --wait
+	excludesfile = /home/jcampbell/.gitignore_global
 [diff]
     tool = vscode
 	guitool = kdiff3

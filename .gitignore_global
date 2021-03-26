@@ -1,0 +1,3 @@
+.idea
+venv
+scripts/deploy_all.sh
