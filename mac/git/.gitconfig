@@ -14,3 +14,8 @@
   tool = vscode
 [mergetool "vscode"]
   cmd = code --wait $MERGED
+[alias]
+	nuke = "!git fetch origin main; git reset --hard origin/main; git clean -df"
+	update = "!git fetch origin main; git rebase origin/main; git push --force-with-lease"
+	amend = commit --amend --no-edit
+	tweak = "!git add .; git amend; git update"
