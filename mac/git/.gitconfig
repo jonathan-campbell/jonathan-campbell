@@ -1,0 +1,16 @@
+[user]
+	name = Jonathan Campbell
+	email = jonathan.campbell@urbint.com
+[init]
+	defaultBranch = main
+[core]
+	editor = code --wait
+	excludesfile = ~/.gitignore_global
+[diff]
+    tool = vscode
+[difftool "vscode"]
+  cmd = code --wait --diff $LOCAL $REMOTE
+[merge]
+  tool = vscode
+[mergetool "vscode"]
+  cmd = code --wait $MERGED
