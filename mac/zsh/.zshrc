@@ -4,6 +4,8 @@ eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
 test ! -f ~/.pyenv/version && pyenv global system
 
+. ~/.zsh_aliases
+
 export PATH="$HOME/.poetry/bin:$PATH"
 
 export NVM_DIR="$HOME/.nvm"
@@ -16,5 +18,4 @@ if [ -f '/Users/jcampbell/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/jcamp
 # The next line enables shell command completion for gcloud.
 if [ -f '/Users/jcampbell/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/jcampbell/google-cloud-sdk/completion.zsh.inc'; fi
 
-function csp { cloud_sql_proxy -instances="$1"=tcp:5433; }
-export -f csp
+csp () { cloud_sql_proxy -instances="$1"=tcp:5433; }
